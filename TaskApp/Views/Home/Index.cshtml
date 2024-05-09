@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <c1-flex-grid allow-add-new="true" allow-delete="true" height="800" width="100%">
+        <c1-items-source read-action-url="@Url.Action("ReadGridData")"
+                         create-action-url="@Url.Action("GridCreateTask")"
+                         update-action-url="@Url.Action("GridUpdateTask")"
+                         delete-action-url="@Url.Action("GridDeleteTask")">
+        </c1-items-source>
+    </c1-flex-grid>
+</div>
